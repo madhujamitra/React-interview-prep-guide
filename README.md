@@ -18,8 +18,8 @@ This repository is intended as a resource for anyone preparing for React intervi
 To get started, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/react-project-Practice.git
-cd react-project-Practice
+git clone https://github.com/yourusername/React-interview-prep-guide.git
+cd React-interview-prep-guide
 ```
 
 
