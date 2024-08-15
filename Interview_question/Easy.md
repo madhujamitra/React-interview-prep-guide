@@ -1,4 +1,4 @@
-Here's the markup with only the questions:
+
 
 ```markdown
 # React Interview Questions
@@ -63,5 +63,3 @@ Here's the markup with only the questions:
 
 30. What is a higher-order component?
 ```
-
-You can use this markup to create a list of questions for a React interview preparation guide.
