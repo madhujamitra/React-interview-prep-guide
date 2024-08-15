@@ -97,37 +97,66 @@ use the this. setState() method
 13. Explain the purpose of `constructor` in a React component.
 Typically, in React constructors are only used for two purposes: Initializing local state by assigning an object to this.state . Binding event handler methods to an instance.
 
-14. How can you embed two or more components into one?
+14. **How can you embed two or more components into one?**  
+You can embed multiple components into one by including them within the parent component's JSX. For example:
+   ```jsx
+   function ParentComponent() {
+     return (
+       <div>
+         <ChildComponent1 />
+         <ChildComponent2 />
+       </div>
+     );
+   }
+   ```
 
-15. What is the significance of `keys` in React?
+15. **What is the significance of `keys` in React?**  
+`Keys` help React identify which items have changed, are added, or are removed. They should be given to elements inside an array to give the elements a stable identity.
 
-16. What is React's context?
+16. **What is React's context?**  
+The React Context API provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-17. How can you use events in React?
+17. **How can you use events in React?**  
+Events in React are named using camelCase, e.g., `onClick`. You can provide event handlers as props to components.
+   ```jsx
+   <button onClick={handleClick}>Click Me</button>
+   ```
 
-18. What are controlled components?
+18. **What are controlled components?**  
+Controlled components have their state controlled by React. For form elements, this means the input's value is driven by the React state and changes via functions like `setState`.
 
-19. What are uncontrolled components?
+19. **What are uncontrolled components?**  
+Uncontrolled components store their own state internally, and you query the DOM directly to access their current value using `refs`.
 
-20. How do you handle forms in React?
+20. **How do you handle forms in React?**  
+Forms in React can be handled using controlled or uncontrolled components. With controlled components, form data is handled by the React state, and functions are used to handle changes and submissions.
 
-21. What are React fragments?
+21. **What are React fragments?**  
+Fragments allow you to group multiple elements without adding extra nodes to the DOM. This can be done using `<>...</>` shorthand or `<React.Fragment>...</React.Fragment>`.
 
-22. What is the difference between `setState` and `forceUpdate`?
+22. **What is the difference between `setState` and `forceUpdate`?**  
+`setState` causes the component to re-render and update the state. `forceUpdate` forces a re-render, but doesn't update the state.
 
-23. How can you handle errors in a React app?
+23. **How can you handle errors in a React app?**  
+You can use Error Boundaries in React to catch and handle errors in components.
 
-24. Explain lifecycle methods in React.
+24. **Explain lifecycle methods in React.**  
+Lifecycle methods are special methods that automatically get called as your component achieves certain milestones, like mounting to the DOM (`componentDidMount`) or updating (`componentDidUpdate`).
 
-25. What are hooks in React?
+25. **What are hooks in React?**  
+Hooks are functions that let developers "hook into" React state and lifecycle features from function components.
 
-26. How does the `useEffect` hook work?
+26. **How does the `useEffect` hook work?**  
+`useEffect` can be used to perform side effects in function components, like data fetching or manual DOM manipulations. It runs after render and can replace `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
 
-27. Explain the `useState` hook.
+27. **Explain the `useState` hook.**  
+`useState` is a hook that lets you add state to functional components. It returns a state variable and a function to update it.
 
-28. What is prop drilling and how can you avoid it?
+28. **What is prop drilling and how can you avoid it?**  
+Prop drilling is the process by which you pass data from one part of the React component tree to another by going through other parts that do not need the data. It can be avoided using Context, Redux, or other state management libraries.
 
-29. How is React different from Angular or Vue?
+29. **How is React different from Angular or Vue?**  
+React is a library for building user interfaces and focuses on the V in MVC. Angular is a full-blown framework with a lot of built-in tools and concepts. Vue is also a progressive framework but is designed to be incrementally adoptable.
 
-30. What is a higher-order component?
-```
+30. **What is a higher-order component?**  
+A higher-order component (HOC) is a function that takes a component and returns a new component with additional props or functionality.
