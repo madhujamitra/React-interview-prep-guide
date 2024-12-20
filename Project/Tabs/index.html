@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content__html {
+            background-color: antiquewhite;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .content__css {
+            background-color: antiquewhite;
+            font-size: 1rem;
+            display: none;
+        }
+
+        .content__js {
+            background-color: antiquewhite;
+            font-size: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <section>
+        <div>
+            <div>
+                <button type="button" onclick="myFunction('html')" id="html_name">HTML</button>
+                <button type="button" onclick="myFunction('css')" id="CSS_name">CSS</button>
+                <button type="button" onclick="myFunction('js')" id="JS_name">JavaScript</button>
+            </div>
+            <div class="content">
+                <p class="content__html" id="html">
+                    The HyperText Markup Language or HTML is the
+                    standard markup language for documents designed to
+                    be displayed in a web browser.
+                </p>
+                <p class="content__css" id="css">
+                    Cascading Style Sheets is a style sheet language
+                    used for describing the presentation of a document
+                    written in a markup language such as HTML or XML.
+                </p>
+                <p class="content__js" id="js">
+                    JavaScript, often abbreviated as JS, is a
+                    programming language that is one of the core
+                    technologies of the World Wide Web, alongside HTML
+                    and CSS.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+   function myFunction(event) {
+
+            const htmlSection = document.querySelector('.content__html')
+            const cssSection = document.getElementById("css")
+            const jsSection = document.getElementById("js")
+            if (event === "html"  && htmlSection.style.display === 'none') {
+                htmlSection.style.display = 'block';
+            } else {
+                htmlSection.style.display = 'none' 
+            }
+            
+            if (event === 'css') {
+                document.querySelector('.content__css').style.display = 'block';
+            } else if (event === 'js') {
+                document.querySelector('.content__js').style.display = 'block';
+            } 
+        }
+    </script>
+</body>
+
+</html>
